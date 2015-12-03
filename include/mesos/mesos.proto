@@ -1487,6 +1487,10 @@ message ContainerInfo {
     // pull the docker image from the registry even if the image
     // is already downloaded on the slave.
     optional bool force_pull_image = 6;
+
+    // Allowing possible network name to be connected to docker network.
+    // Without this value, default network (docker0) is connected to container.
+    optional string network_name = 7;
   }
 
   message MesosInfo {
